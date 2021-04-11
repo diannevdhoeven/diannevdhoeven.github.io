@@ -1,0 +1,15 @@
+body {
+  padding: 30px;
+  font-family: Serif;
+  vertical-align:top;
+}
+
+div {
+  max-width: 200px;
+  vertical-align:top;
+  display: inline-block;
+}
+
+img {
+  width: 100%
+}

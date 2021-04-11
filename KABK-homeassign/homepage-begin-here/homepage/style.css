@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Fredoka+One&family=Recursive:wght@300&family=Source+Code+Pro:wght@200&display=swap");
+:root {
+  background: #212121;
+  color: #fff;
+ --color-interaction:  lightblue;
+  --color-highlight: pink;
+  --color-title: white;
+  font-family: 'Fredoka One', serif;  
+  margin: -1rem;
+  padding: 3rem; 
+  line-height: 1.5;
+  font-size: calc(1vw + 45%);
+}
+
+.icon-sprite {
+  display: none;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  transform: translateY(-0.1ex);
+  fill: none;
+  stroke: none;
+  overflow: auto;
+}
+.icon__child--fill {
+  fill: var(--color-main, currentColor);
+}
+.icon__child--fill.icon__child--highlight {
+  fill: var(--color-highlight, currentColor);
+}
+.icon__child--outline {
+  stroke: var(--color-main, currentColor);
+  stroke-width: 0.05em;
+  vector-effect: non-scaling-stroke;
+}
+.icon__child--outline.icon__child--highlight {
+  stroke: var(--color-highlight, currentColor);
+}
+.icon--outline {
+  border: 0.05em solid currentColor;
+  border-radius: 50%;
+}
+.icon--block {
+  display: block;
+  margin-right: 0;
+  width: auto;
+  height: auto;
+  transform: none;
+}
+
+h1, h2, h3 {
+  color: var(--color-title, darkblue);
+}
+
+a {
+  color: var(--color-interaction, blue);
+  transition: color 200ms linear;
+}
+
+a:hover {
+  color: turquoise;
+  --color-highlight: red;
+}
+
+.intro {
+  font-size: 1.2em;
+}
+
+.phat {
+  font-size: 5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  -webkit-animation: rainbow 10s infinite linear;
+          animation: rainbow 10s infinite linear;
+  text-shadow: 0 0 0.25em currentColor;
+}
+.subtitle {
+  font-family: 'Recursive', sans-serif;
+
+}
+.bodytext {
+  font-family: 'Recursive', sans-serif;
+  font-size: 15pt;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    color: #999999;
+  }
+  2.7777777778% {
+    color: #ff9999;
+  }
+  5.5555555556% {
+    color: #99ffff;
+  }
+  8.3333333333% {
+    color: #99ff99;
+  }
+  11.1111111111% {
+    color: #ccff99;
+  }
+  13.8888888889% {
+    color: #ebff99;
+  }
+  16.6666666667% {
+    color: #ffff99;
+  }
+  19.4444444444% {
+    color: #fff099;
+  }
+  22.2222222222% {
+    color: #ffe699;
+  }
+  25% {
+    color: #ffdd99;
+  }
+  27.7777777778% {
+    color: #ffd699;
+  }
+  30.5555555556% {
+    color: #ffd199;
+  }
+  33.3333333333% {
+    color: #ffcc99;
+  }
+  36.1111111111% {
+    color: #ffc899;
+  }
+  38.8888888889% {
+    color: #ffc599;
+  }
+  41.6666666667% {
+    color: #ffc299;
+  }
+  44.4444444444% {
+    color: #ffbf99;
+  }
+  47.2222222222% {
+    color: #ffbd99;
+  }
+  50% {
+    color: #ffbb99;
+  }
+  52.7777777778% {
+    color: #ffb999;
+  }
+  55.5555555556% {
+    color: #ffb899;
+  }
+  58.3333333333% {
+    color: #ffb699;
+  }
+  61.1111111111% {
+    color: #ffb599;
+  }
+  63.8888888889% {
+    color: #ffb499;
+  }
+  66.6666666667% {
+    color: #ffb399;
+  }
+  69.4444444444% {
+    color: #ffb199;
+  }
+  72.2222222222% {
+    color: #ffb199;
+  }
+  75% {
+    color: #ffb099;
+  }
+  77.7777777778% {
+    color: #ffaf99;
+  }
+  80.5555555556% {
+    color: #ffae99;
+  }
+  83.3333333333% {
+    color: #ffad99;
+  }
+  86.1111111111% {
+    color: #ffad99;
+  }
+  88.8888888889% {
+    color: #ffac99;
+  }
+  91.6666666667% {
+    color: #ffac99;
+  }
+  94.4444444444% {
+    color: #ffab99;
+  }
+  97.2222222222% {
+    color: #ffaa99;
+  }
+  100% {
+    color: #ffaa99;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: #999999;
+  }
+  2.7777777778% {
+    color: #ff9999;
+  }
+  5.5555555556% {
+    color: #99ffff;
+  }
+  8.3333333333% {
+    color: #99ff99;
+  }
+  11.1111111111% {
+    color: #ccff99;
+  }
+  13.8888888889% {
+    color: #ebff99;
+  }
+  16.6666666667% {
+    color: #ffff99;
+  }
+  19.4444444444% {
+    color: #fff099;
+  }
+  22.2222222222% {
+    color: #ffe699;
+  }
+  25% {
+    color: #ffdd99;
+  }
+  27.7777777778% {
+    color: #ffd699;
+  }
+  30.5555555556% {
+    color: #ffd199;
+  }
+  33.3333333333% {
+    color: #ffcc99;
+  }
+  36.1111111111% {
+    color: #ffc899;
+  }
+  38.8888888889% {
+    color: #ffc599;
+  }
+  41.6666666667% {
+    color: #ffc299;
+  }
+  44.4444444444% {
+    color: #ffbf99;
+  }
+  47.2222222222% {
+    color: #ffbd99;
+  }
+  50% {
+    color: #ffbb99;
+  }
+  52.7777777778% {
+    color: #ffb999;
+  }
+  55.5555555556% {
+    color: #ffb899;
+  }
+  58.3333333333% {
+    color: #ffb699;
+  }
+  61.1111111111% {
+    color: #ffb599;
+  }
+  63.8888888889% {
+    color: #ffb499;
+  }
+  66.6666666667% {
+    color: #ffb399;
+  }
+  69.4444444444% {
+    color: #ffb199;
+  }
+  72.2222222222% {
+    color: #ffb199;
+  }
+  75% {
+    color: #ffb099;
+  }
+  77.7777777778% {
+    color: #ffaf99;
+  }
+  80.5555555556% {
+    color: #ffae99;
+  }
+  83.3333333333% {
+    color: #ffad99;
+  }
+  86.1111111111% {
+    color: #ffad99;
+  }
+  88.8888888889% {
+    color: #ffac99;
+  }
+  91.6666666667% {
+    color: #ffac99;
+  }
+  94.4444444444% {
+    color: #ffab99;
+  }
+  97.2222222222% {
+    color: #ffaa99;
+  }
+  100% {
+    color: #ffaa99;
+  }
+}
+.inverted {
+  background: #212121;
+  color: #fff;
+  --color-interaction: lighblue;
+  --color-highlight: pink;
+  --color-title: hotpink;
+  margin: -1rem;
+  padding: 1rem;
+}

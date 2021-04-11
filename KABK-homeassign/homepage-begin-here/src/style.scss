@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:400,700');
+
+:root {
+  --color-interaction: blue;
+  --color-highlight: turquoise;
+  --color-title: darkblue;
+  font-family: 'Hind', sans-serif;  
+  padding: 1rem;
+  line-height: 1.5;
+  font-size: calc(1vw + 45%);
+}
+
+.icon-sprite {
+  display: none;
+}
+
+.icon {
+  $root: #{&};
+  
+  display: inline-block; // easier placement next to text
+  vertical-align: middle;
+  width: 1em; // sized relatively to the font size by default
+  height: 1em;
+  margin-right: .25em;
+  // outline: 1px solid rgba(255,0,0,.5);
+  transform: translateY(-0.1ex); // positiontion correction, relative to font
+  fill: none;
+  stroke: none;
+  overflow: auto; // makes sure strokes are nevere cut off
+  &__child--fill {
+    fill: var(--color-main, currentColor);
+    &#{$root}__child--highlight {
+      fill: var(--color-highlight, currentColor);
+    } 
+  }
+  &__child--outline { 
+    stroke: var(--color-main, currentColor);
+    stroke-width: 0.05em;
+    vector-effect: non-scaling-stroke;
+    &#{$root}__child--highlight {
+      stroke: var(--color-highlight, currentColor);
+    }
+  }
+  
+  &--outline {
+    border: 0.05em solid currentColor;
+    border-radius: 50%;
+  }
+  &--block {
+    display: block;
+    margin-right: 0;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+}
+
+h1, h2, h3 {
+  color: var(--color-title, darkblue);
+}
+
+a {
+  color: var(--color-interaction, blue);
+  transition: color 200ms linear;
+}
+a:hover {
+  color: turquoise;
+  --color-highlight: red;
+}
+
+.intro {
+  font-size: 1.2em;
+}
+
+.phat {
+  font-size: 5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  animation: rainbow 10s infinite linear;
+  text-shadow: 0 0 .25em currentColor;
+}
+
+$step: 100/36;
+$parts: 100/$step;
+
+@keyframes rainbow {
+  @for $i from 0 through $parts {
+    #{$i * $step}% {
+      color: hsl(360/$i, 100%, 80%);
+    }
+  }
+}
+
+
+.inverted {
+  background: #212121;
+  color: #fff;
+  
+  --color-interaction: lighblue;
+  --color-highlight: pink;
+  --color-title: hotpink;
+  
+  margin: -1rem;
+  padding: 1rem;
+}
